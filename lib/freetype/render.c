@@ -19,6 +19,7 @@ void init_constants()
   set_js_variable("FT_LOAD_PEDANTIC",              FT_LOAD_PEDANTIC);
   set_js_variable("FT_LOAD_MONOCHROME",            FT_LOAD_MONOCHROME);
   set_js_variable("FT_LOAD_NO_AUTOHINT",           FT_LOAD_NO_AUTOHINT);
+  set_js_variable("FT_LOAD_BITMAP_METRICS_ONLY",   FT_LOAD_BITMAP_METRICS_ONLY);
 
   set_js_variable("FT_LOAD_TARGET_NORMAL",         FT_LOAD_TARGET_NORMAL);
   set_js_variable("FT_LOAD_TARGET_LIGHT",          FT_LOAD_TARGET_LIGHT);
