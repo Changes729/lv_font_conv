@@ -1,6 +1,7 @@
 {
   "name": "lv_font_conv",
   "version": "0.4.2",
+  "homepage": "https://Changes729.github.io/lv_font_conv",
   "description": "Rasterize vector fonts for embedded use. Supports subsettings & merge.",
   "keywords": [
     "font",
@@ -23,7 +24,9 @@
     "build:freetype": "docker run --rm -v $(pwd):/src/lv_font_conv -it lv_font_conv_freetype ./lv_font_conv/support/build.sh",
     "lint": "eslint .",
     "test": "npm run lint && nyc mocha",
-    "coverage": "npm run test && nyc report --reporter html"
+    "coverage": "npm run test && nyc report --reporter html",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "argparse": "^1.0.10",
@@ -38,6 +41,7 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "file-saver": "^2.0.2",
+    "gh-pages": "^2.2.0",
     "mocha": "^6.2.2",
     "nyc": "^15.0.0",
     "parcel-bundler": "^1.12.4",
