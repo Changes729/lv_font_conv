@@ -1,3 +1,29 @@
+1.1.1 / 2020-09-01
+------------------
+
+- `--version` should show number from `package.json`.
+
+
+1.1.0 / 2020-07-27
+------------------
+
+- Added `post.underlinePosition` & `post.underlineThickness` info to font header.
+
+
+1.0.0 / 2020-06-26
+------------------
+
+- Maintenance release.
+- Set package version 1.x, to label package as stable.
+- Deps bump.
+
+
+0.4.3 / 2020-03-05
+------------------
+
+- Enabled `--bpp 8` mode.
+
+
 0.4.2 / 2020-01-05
 ------------------
 

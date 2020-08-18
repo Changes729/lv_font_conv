@@ -51,7 +51,10 @@ Size (bytes) | Description
 1 | Glyph advanceWidth bits length (unsigned, may be FP4)
 1 | Compression alg ID (0 - raw bits, 1 - RLE-like with XOR prefilter, 2 - RLE-like only without prefilter)
 1 | Subpixel rendering. `0` - none, `1` - horisontal resolution of bitmaps is 3x, `2` - vertical resolution of bitmaps is 3x.
-3 | Unused (Align header length to 4x)
+1 | Reserved (align to 2x)
+2 | Underline position (int16), scaled `post.underlinePosition`
+2 | Underline thickness (uint16), scaled `post.underlineThickness`
+x | Unused (Align header length to 4x)
 
 Note, `Ascent + abs(Descent)` may be NOT equal to font size.
 
@@ -298,7 +301,7 @@ spec.
 
 Glyph data uses modified RLE compression - [I3BN](https://thesai.org/Downloads/Volume7No7/Paper_34-New_modified_RLE_algorithms.pdf), with prefilter and tuned options.
 
-Everything works with "pixels" (groups of 2, 3 or 4 bits). That will not work
+Everything works with "pixels" (groups of 2, 3, 4 or 8 bits). That will not work
 for bitonal fonts, but those are small enougth.
 
 Notable compression gain starts with ~30px sizes. That's explained by 2 moments:
